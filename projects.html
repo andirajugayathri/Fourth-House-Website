@@ -165,7 +165,7 @@
             }
             
             .project-title {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .breadcrumb-home, .breadcrumb-current {
@@ -360,9 +360,9 @@
                 font-size: 1rem;
             }
             
-            .project-title,.highlight-text,
+            .highlight-text,
             .features-title, .features-title .highlight-text {
-                font-size: 1.5rem;
+                font-size: 1rem;
             }
             
             .feature-item {
@@ -386,7 +386,7 @@
             font-family: 'Poppins';
             font-size: 35px;
             font-weight: 700;
-            line-height: 28px;
+            /* line-height: 28px; */
             color: #F80208;
             text-align: center;
             margin-bottom: 25px;
@@ -395,7 +395,7 @@
         .strategic-heading{
             font-size: 35px;
             font-weight: 700;
-            line-height: 28px; 
+            /* line-height: 28px;  */
             color: #2A467B;  
         }
         
@@ -549,6 +549,9 @@
         }
         
         @media (max-width: 768px) {
+            .strategic-heading{
+                font-size: 24px;
+            }
             .main-heading {
                 font-size: 1.5rem;
             }
@@ -557,10 +560,10 @@
                 padding: 15px;
             }
             
-            .benefit-point {
+            /* .benefit-point {
                 padding: 8px 0 8px 25px;
                 font-size: 0.9rem;
-            }
+            } */
             
             .benefit-point:before {
                 width: 16px;
@@ -672,7 +675,7 @@
         .limitedplots-title{
             color: #2A467B;
             font-weight: 700;
-            line-height: 40px;
+            /* line-height: 40px; */
             font-size: 34px;
 
         }
@@ -808,7 +811,6 @@
             width: 553px;
             height: 353px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .concept-image {
@@ -984,7 +986,7 @@
 
         @media (max-width: 768px) {
     .why-choose-title {
-        font-size: 24px;
+        font-size: 31px;
         margin-left: 0;
         text-align: center;
     }
@@ -1136,46 +1138,111 @@ Secure your future section */
             .heading {
                 font-size: 2.5rem;
             }
+            .strategic-image {
+                margin-left: -66px;
+                margin-top: -40px;
+            }
+            .main-box {
+                width: 223px;
+                height: 222px;
+                margin-top: 51.48px;
+                margin-left: 9px;
+            }
+
+            .img-box {
+                width: 326px;
+                height: 226px;
+                margin-top: 3% !important;
+                margin-left: 2%;
+                border-radius: 10px;
+            }
+
+            .property-location-wrapper {
+                width: 209.5px;
+                left: 177px;
+                top: -99px;
+                padding: 0 20px 10px 10px;
+                height: 212.6px;
+            }
+            .map-box {
+                width: 178.5px;
+                height: 202.6px;
+            }
+            .pink-block {
+                width: 100%;
+                height: 141px;
+                margin-top: -275px;
+                margin-left: 150px;
+                bottom: -10px;
+                right: -10px;
+            }
+            .dot-pattern {
+                grid-template-columns: repeat(8, 1fr);
+                margin-left: 13px;
+                margin-bottom: -160px;
+                display: grid;
+                gap: 9px;
+            }
+
+            .concept-container {
+                padding: 36px;
+                margin: 38px auto;
+            }
+
+            .image-container {
+                width: 276px;
+                margin-left: 47px;
+                height: 357px;
+            overflow: hidden;
+            }
+            .why-choose-section {
+                margin-top: -82px;
+            }
+            .alert-icon {
+                color: #e74c3c;
+                margin-top: -149px;
         }
+    }
+
         @media (max-width: 576px) {
-    .blue-section {
-        width: 100%;
-        padding-left: 20px;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        align-items: center;
-        text-align: center;
+        .blue-section {
+            width: 100%;
+            padding-left: 20px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            align-items: center;
+            text-align: center;
+        }
+
+        .pink-section {
+            display: none;
+        }
+
+        .image-section {
+            display: none;
+        }
+
+        .heading {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .contact-button {
+            width: auto;
+            font-size: 1rem;
+            padding: 10px 20px;
+        }
     }
 
-    .pink-section {
-        display: none;
-    }
+    @media (max-width: 400px) {
+        .heading {
+            font-size: 1.5rem;
+        }
 
-    .image-section {
-        display: none;
+        .contact-button {
+            font-size: 0.9rem;
+            padding: 8px 16px;
+        }
     }
-
-    .heading {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
-    .contact-button {
-        width: auto;
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-}
-
-@media (max-width: 400px) {
-    .heading {
-        font-size: 1.5rem;
-    }
-
-    .contact-button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-}
 
         
  </style>
@@ -1401,16 +1468,16 @@ Secure your future section */
                 
                 <ul class="benefits-list">
                     <li class="benefit-point">
-                        <i class="fa-solid fa-circle-arrow-right"></i>
-                        Close to IT hubs, educational institutions, and healthcare centers
+                        <p><i class="fa-solid fa-circle-arrow-right"></i>
+                        Close to IT hubs, educational institutions, and healthcare centers</p>
                     </li>
                     <li class="benefit-point">
-                        <i class="fa-solid fa-circle-arrow-right"></i>
-                        Easy access to Outer Ring Road (ORR) and Airport Road
+                        <p><i class="fa-solid fa-circle-arrow-right"></i>
+                        Easy access to Outer Ring Road (ORR) and Airport Road</p>
                     </li>
                     <li class="benefit-point">
-                        <i class="fa-solid fa-circle-arrow-right"></i>
-                        Rapidly developing infrastructure for enhanced connectivity
+                        <p><i class="fa-solid fa-circle-arrow-right"></i>
+                        Rapidly developing infrastructure for enhanced connectivity</p>
                     </li>
                 </ul>
                 
@@ -1418,12 +1485,12 @@ Secure your future section */
                 <div class="hr mb-4"></div>
                 <ul class="benefits-list">
                     <li class="benefit-point">
-                        <i class="fa-solid fa-circle-arrow-right"></i>
-                        High growth potential in an underdeveloped yet strategically critical area
+                        <p><i class="fa-solid fa-circle-arrow-right"></i>
+                        High growth potential in an underdeveloped yet strategically critical area</p>
                     </li>
                     <li class="benefit-point">
-                        <i class="fa-solid fa-circle-arrow-right"></i>
-                        Ideal for both immediate construction and long-term value appreciation
+                        <p><i class="fa-solid fa-circle-arrow-right"></i>
+                        Ideal for both immediate construction and long-term value appreciation</p>
                     </li>
                 </ul>
             </div>
@@ -1554,8 +1621,8 @@ Secure your future section */
         <h2 class="limitedplots-title">Limited Plots Available</h2>
         <div class="alert-section">
             <div class="d-flex align-items-center">
-                <span class="alert-icon"><i class="fa-solid fa-circle-arrow-right"></i></span>
-                <p>This is a rare opportunity to own land in one of Hyderabad's most promising real estate corridors. With limited premium plots available, early investors will benefit from exclusive pricing and launch incentives.</p>
+                <p><span class="alert-icon"><i class="fa-solid fa-circle-arrow-right"></i></span>
+               This is a rare opportunity to own land in one of Hyderabad's most promising real estate corridors. With limited premium plots available, early investors will benefit from exclusive pricing and launch incentives.</p>
             </div>
         </div>
     </div>
@@ -1568,7 +1635,7 @@ Secure your future section */
        
         <div class="blue-section">
             <h1 class="heading">Secure Your Future<br>Today</h1>
-            <a href="#" class="contact-button">Contact Us</a>
+            <a href="contact-us.html" class="contact-button">Contact Us</a>
         </div>
         
        
