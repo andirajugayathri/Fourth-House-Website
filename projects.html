@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourth House Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+       <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+       <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <style>
+        *{
+            font-family: 'Poppins';
+        }
+
+        .top-header {
+            background-color: #2A467B;
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        .top-header a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .top-header .social-icons a {
+            margin-left: 15px;
+        }
+        
+        /* Navbar Styling */
+        .navbar {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            padding: 50px 0;
+        }
+        
+        .navbar.scrolled {
+            padding:10px;
+            background-color: white !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .navbar-nav .nav-link {
+            font-family: 'Poppins';
+            font-size: 18px;
+            font-weight: 700;
+            color: #2A467B;
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: #E24626;
+            position: relative;
+        }
+        
+        .navbar-nav .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 6px;
+            left: 13px;
+            right: 13px;
+            border: 1px solid #2A467B;
+        }
+        
+       
+
+        /* project-section */
+        .project-section {
+            position: relative;
+            height: 590px;
+            width: 100%;
+            background-image:url('assets/projectbanner.png');
+            background-size: cover;
+            /* background-position: center; */
+            overflow: hidden;
+            
+        }
+        
+        .project-content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            transform: translateY(-50%);
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .project-title {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            color: #2A467B;
+        }
+
+        .projecttitle {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            color: #2A467B;
+        }
+        
+        .breadcrumb-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .breadcrumb-home {
+            color: #F80208;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 25px;
+        }
+        
+        .breadcrumb-arrow {
+            margin: 0 10px;
+            color: #2A467B;
+            font-size: 1.2rem;
+        }
+        
+        .breadcrumb-current {
+            color: #2A467B;
+            font-weight: 400;
+            text-decoration: none;
+            font-size: 25px;
+        }
+        /* Media queries for responsive design */
+        @media (max-width: 992px) {
+            .navbar {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            padding: 10px 0;
+            }
+            .navbar-nav {
+                background-color: white;
+                padding: 15px;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+            
+            .navbar-nav .nav-link {
+                padding: 10px 20px;
+            }
+            
+            .project-section {
+                height: 400px;
+            }
+            
+            .project-title {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .project-section {
+                height: 300px;
+            }
+            
+            .project-title {
+                font-size: 2.5rem;
+            }
+            
+            .breadcrumb-home, .breadcrumb-current {
+                font-size: 1rem;
+            }
+        }
+        
+
+       
+       /* premium villa */
+
+
+        
+        .premium-title {
+            color:#2A467B;
+            text-align: center;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 28px;
+
+        }
+        
+        .premium-plots-section {
+            padding: 60px 0 30px;
+        }
+        
+        .intro-text {
+            text-align: center;
+            line-height: 28px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            color: #646464;
+        }
+        
+        .highlight-text {
+            color: #ff0000;
+            font-weight: 600;
+        }
+
+        .flagship-container{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .flagship {
+            position: relative;
+            display: inline-block;
+        }
+
+        .flagship::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 14px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #1e3a8a;
+            border-top-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            box-sizing: border-box;
+            z-index: 0;
+        }
+
+        .flagship-badge {
+            background-color:  #D3E1FA; 
+            padding: 16px 45px;
+            font-size: 30px;
+            font-weight: 600;
+            color: #2A467B;
+            border-top-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        
+
+
+        .project-title .highlight-text {
+            font-size: 30px;
+            font-weight: 700;
+        }
+        
+        .project-description {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size:18px ;
+            font-weight: 400;
+            line-height: 28px;
+            color:#646464;
+        }
+        
+        .features-container {
+            display: flex;
+            justify-content: space-between;
+            /* margin-bottom: 40px; */
+            position: relative;
+        }
+        
+        .feature-item {
+            text-align: center;
+            width: 15%;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .feature-icon-container {
+            width: 100px;
+            height: 100px;
+            background-color: #FBDADA;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px;
+        }
+        
+        .feature-icon {
+           width: 50px;
+           height: 50px;
+        }
+        
+        .feature-title {
+            color: #2A467B!important;
+            font-weight: 600!important;
+            font-size: 24px;
+            line-height: 28px;
+        }
+        
+        .feature-description {
+            color: #646464;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+        
+        .dotted-line {
+            position: absolute;
+            top: 45px;
+            left: 90px;
+            right: 90px;
+            height: 2px;
+            border-top: 2px dotted #ff0000;
+            z-index: 1;
+        }
+        
+        .project-features-section {
+            background-color: #e8f4ff;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        
+        .features-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .features-title .highlight-text {
+            font-size: 1.8rem;
+        }
+        
+        .features-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #555;
+        }
+        
+        @media (max-width: 992px) {
+            .features-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .feature-item {
+                width: 45%;
+                margin-bottom: 30px;
+            }
+            
+            .dotted-line {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .premium-title {
+                font-size: 2rem;
+            }
+            
+            .flagship-badge {
+                font-size: 1rem;
+            }
+            
+            .project-title,.highlight-text,
+            .features-title, .features-title .highlight-text {
+                font-size: 1.5rem;
+            }
+            
+            .feature-item {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            
+            .feature-icon-container {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .feature-icon {
+                font-size: 24px;
+            }
+        }
+
+
+
+        .project-feature-heading {
+            font-family: 'Poppins';
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 28px;
+            color: #F80208;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .strategic-heading{
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 28px; 
+            color: #2A467B;  
+        }
+        
+        .accent-text {
+          color:#2A467B;
+        }
+        
+        .showcase-area {
+            background-color: #E2EFFD;
+            padding: 78px 0px 40px 0px;
+        }
+        
+        .showcase-text {
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+            color: #555;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+        
+        .gallery-container {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .image-carousel {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .carousel-item-img {
+            width: 100%;
+            border-radius: 0;
+        }
+        
+        .amenities-container {
+            padding: 20px;
+        }
+        
+        .amenity-row {
+            /* margin-bottom: 15px; */
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .amenity-name {
+            color: #2A467B;
+        }
+        
+        .amenity-info {
+            font-family: 'Poppins';
+            color: #646464;
+            font-weight: 300;
+        }
+        
+        .header-stripe {
+            background-color: #ff0000;
+            width: 100%;
+            height: 50px;
+        }
+
+
+
+        
+        .location-section {
+            font-family: 'Poppins';
+            padding: 57px 74px;
+        }
+        
+        .location-description {
+            margin:20px 0px;
+            font-size: 18px;
+            font-weight: 400px!important;
+            color:#646464;
+            line-height: 28px;
+        }
+
+        .strategic-image{
+            margin-left: -43px;
+            margin-top: -40px;
+        }
+
+        .hr{
+            width:29%;
+            height:3px;
+            background-color: #2A467B;
+        }
+        
+        .category-heading {
+            color: #ff0000;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }     
+        
+        .benefits-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-point {
+           display: flex;
+           align-items: center;
+            column-gap: 10px;
+            margin-bottom: 12px;
+            color: #646464;
+            font-size: 18px;
+            font-weight: 400;
+
+        }
+
+        .benefit-point i{
+            color:#2A467B ;
+        }
+        
+
+        
+        .property-visual {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .property-visual img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 992px) {
+            .image-carousel {
+                flex-direction: row;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+            }
+            
+            .carousel-item-img {
+                min-width: 100%;
+                scroll-snap-align: start;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 1.5rem;
+            }
+            
+            .amenities-container {
+                padding: 15px;
+            }
+            
+            .benefit-point {
+                padding: 8px 0 8px 25px;
+                font-size: 0.9rem;
+            }
+            
+            .benefit-point:before {
+                width: 16px;
+                height: 16px;
+                top: 10px;
+            }
+            
+            .check-mark {
+                left: 5px;
+                top: 14px;
+                font-size: 0.4rem;
+            }
+        }
+
+
+
+        .section-title {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .why-choose-container {
+            background-color: #f8f9fa;
+            padding: 3rem 0;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        
+        .plot-types-container {
+            background-color: white;
+            padding: 3rem 0;
+            position: relative;
+        }
+        
+        .plot-types-header {
+            color: #e74c3c;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .plot-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px dashed #e74c3c;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            height: 100%;
+        }
+        
+        .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .plot-icon {
+            background-color: #f8f9fa;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .plot-icon i {
+            font-size: 2rem;
+            color: #3498db;
+        }
+
+
+
+
+        
+        /* .limited-plots-container {
+            background-color: #f8f9fa;
+            padding: 3rem 0;
+        } */
+        
+        .limitedplots-title{
+            color: #2A467B;
+            font-weight: 700;
+            line-height: 40px;
+            font-size: 34px;
+
+        }
+
+        .alert-section{
+            margin:30px 0px;
+        }
+        
+        .alert-icon {
+            color: #e74c3c;
+            margin-top: -36px;
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        
+        .cta-section {
+            height: 473px;
+            background: linear-gradient(135deg, #1a3c6e 0%, #2c3e50 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .cta-content {
+            padding: 2rem;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .feature-card, .plot-card {
+                margin-bottom: 1rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .plot-types-header {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+
+
+.main-box{
+    width: 390px;
+    height: 273px;
+    margin-top: 43.48px;
+    margin-left: 63px;
+    background-color: red;
+    border-radius: 10px;
+
+}
+.img-box{
+
+
+    width: 498px;
+    height: 309px;
+    margin-top: 3% !important;
+    background-image: url('assets/projectfeature.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    margin-left: 2%;
+    border-radius: 10px;
+
+}
+
+.map-box{
+    width: 206.5px;
+    height: 239.6px;
+    border-radius: 10px;
+   
+    background-position: center;
+    background-image: url(assets/projectfeauturemap.jpg);
+    background-size: cover;
+}
+
+.property-location-wrapper {
+    width: 238.5px;
+    left: 310px;
+    top: -99px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    padding: 0 20px 10px 10px;
+    height: 249.6px;
+}
+
+.dot-pattern {
+    margin-left: -32px;
+    margin-bottom: -122px;
+    display: grid
+;
+    grid-template-columns: repeat(10, 0fr);
+    gap: 10px;;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(247, 191, 190, 0.7);
+            border-radius: 50%;
+        }
+        
+        .image-container {
+            width: 553px;
+            height: 353px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .concept-image {
+            width: 100%;
+            display: block;
+        }
+        
+        .pink-block {
+            width: 343px;
+            height: 246px;
+            margin-top: -230px;
+            margin-left: 225px;
+            bottom: 0px;
+            background-color: rgba(247, 191, 190, 0.5);
+
+        }
+        
+        @media (max-width: 768px) {
+            .concept-container {
+                padding: 10px;
+                margin: 20px auto;
+            }
+            
+            .dot-pattern {
+                grid-template-columns: repeat(6, 1fr);
+            }
+            
+            .pink-block {
+                width: 70%;
+                height: 70px;
+                bottom: -10px;
+                right: -10px;
+            }
+        }
+
+
+          /* why choose this project */
+        
+          .why-choose-section {
+            padding: 60px 0;
+            background-image: url('assets/why-choose-bg.png');
+            /* height: 100%; */
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .why-choose-title {
+            font-family: 'Rubik';
+            font-weight: 700;
+            font-size: 34px;
+            justify-content: center;
+            color: #34558b;
+            display: flex;
+            font-weight: 700;
+            margin-bottom: 33px;
+            margin-left: 33%;
+        }
+        
+        .plot-types-card {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border-radius: 58px;
+            overflow: hidden;
+            width: 544px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            /* height: 507px; */
+            background-image: url(assets/why-choose-image.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .plot-types-header {
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 30px;
+            background-color: #FEF3F1;
+            border: 4px solid #FFFFFF;
+            border-radius: 10px;
+            color: #F80208;
+            padding: 10px 20px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+        }
+        
+        .villa-plot-box {
+            background-color: #fff;
+            border: 3px dashed #FF8AA2;
+            margin-top: 236px !important;;
+            border-radius: 15px;
+            padding: 20px;
+            width: 299px;
+            height: 206px!important;
+            margin-left: 20px;
+            text-align: center;
+           
+            z-index: 2;
+        }
+        
+        .villa-plot-box h3 {
+            font-family:'Poppins';
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 24px;
+            text-align: center;
+            color: #F80208;
+          
+        }
+        
+        .villa-plot-box p {
+            color:#646464;
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+        }
+        
+
+        .feature-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:30px 9px 20px 9px;
+            flex-direction: column;
+            width: 260px;
+            height: 216px;
+            border-radius: 5px;
+            border-left: 2px solid #1a3a6a;
+            background-color: white;
+            box-shadow: 0px 8px 24px 0px #959DA533;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .featuretitle {
+            font-family: 'Poppins';
+            color:#F80208;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 21.6px;
+            letter-spacing: 0%;
+
+        }
+        
+        .feature-description {
+            font-family:'Poppins';
+            color: #646464;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0%;
+            text-align: center;
+
+        }
+
+        @media (max-width: 768px) {
+    .why-choose-title {
+        font-size: 24px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .plot-types-card {
+        width: 100%;
+        flex-direction: column;
+        border-radius: 30px;
+        margin-bottom: 20px;
+    }
+
+    .villa-plot-box {
+        background-color: #fff;
+        margin-top: 180px !important;
+        /* width: 90%; */
+        height: auto !important;
+        padding: 15px;
+    }
+
+    .feature-cards-container .row > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .feature-card {
+        width: 100%;
+        height: auto;
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+
+    .icon-container {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .icon-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+/* 
+Secure your future section */
+.banner {
+            height: 473px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        
+       
+        .blue-section {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 61%;
+            height: 100%;
+            background-color: #013469;
+            clip-path: polygon(0 0, 72% 0, 95% 100%, -4% 100%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 70px;
+        }
+        
+       
+        .pink-section {
+            position: absolute; 
+            left: 40%; top: 0; 
+            width: 24%; 
+            height: 100%; 
+            background-color: #F1AEAF; 
+            clip-path: polygon(0 0, 26% 0, 99% 100%, 47% 100%);
+            z-index: 2;
+        }
+        
+        /* Image section */
+        .image-section {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 55%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .heading {
+            font-family: 'Rubik';
+            font-weight: 700;
+            font-size: 55.88px;
+            line-height: 67.06px;
+            letter-spacing: 0%;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-button {
+            font-family: 'Nirmala UI', sans-serif;
+            font-weight: 700;
+            font-size: 28.56px;
+            background-color: #F80208;
+            color: white;
+            border: none;
+            padding: 11px 23px;
+            border-radius: 34px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            width: 25%;
+        }
+        
+        .contact-button:hover {
+            background-color: #d40000;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .blue-section {
+                width: 65%;
+                padding-left: 30px;
+            }
+            
+            .pink-section {
+                left: 55%;
+                width: 25%;
+            }
+            
+            .image-section {
+                width: 40%;
+            }
+            
+            .heading {
+                font-size: 2.5rem;
+            }
+        }
+        @media (max-width: 576px) {
+    .blue-section {
+        width: 100%;
+        padding-left: 20px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        align-items: center;
+        text-align: center;
+    }
+
+    .pink-section {
+        display: none;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    .heading {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .contact-button {
+        width: auto;
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .contact-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+        
+ </style>
+</head>
+<body>
+    <!-- Top Header -->
+     <div class="top-header d-lg-block d-none">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center gap-4">
+                        <a href="tel:+911234567890" class="me-4"><i class="fas fa-phone me-2"></i> +91 12345 67890</a>
+                        <a href="mailto:fourthhouseprime@gmail.com"><i class="fas fa-envelope me-2"></i> fourthhouseprime@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+   <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/Fourth-House-Prime-Properties-Logo.png" alt="Fourth House Logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ourstory.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact-us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section with green fields background -->
+<section class="project-section">
+    <div class="project-content">
+        <h1 class="projecttitle">Projects</h1>
+        <div class="breadcrumb-container">
+            <a href="index.html" class="breadcrumb-home">Home</a>
+            <span class="breadcrumb-arrow"><i class="fa-solid fa-angles-right"></i></span>
+            <a href="projects.html" class="breadcrumb-current">Projects</a>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Premium Villa Plots Section -->
+    <div class="container">
+        <section class="premium-plots-section">
+            <div class="premium-title">Premium Villa Plots</div>
+            <div>
+            <p class="intro-text">
+                At <span class="highlight-text">Fourth House Prime Properties</span>, we specialize in creating premium land developments that offer both lifestyle value and significant investment potential. Our projects are designed with meticulous planning, robust infrastructure, and a focus on future growth. Each plot is strategically positioned for immediate construction, ensuring that your investment is ready to build upon as soon as you are.
+            </p>
+            </div>
+            <div class="flagship-container">
+            <div class="flagship text-center">
+                <div class="flagship-badge">Flagship Project</div>
+            </div>
+            </div>
+            <div class="project-title text-center">
+                <span class="highlight-text">Premium Villa Plots  | </span><span>100 Ft</span>
+                <span class="highlight-text">Road Corridor</span>
+            </div>
+            
+            <p class="project-description">
+                Set along Hyderabad's prestigious 100 Ft Road Corridor, this is a premium 10-acre gated community designed to offer the highest standards of living. Whether you're looking to build your dream home or make an intelligent investment, this development provides an exclusive opportunity to secure land in one of Hyderabad's most rapidly appreciating areas.
+            </p>
+            
+            <!-- Features Icons Section -->
+            <div class="features-container">
+                <div class="dotted-line"></div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon-container">
+                        <img src="assets/locationicon.png" alt="Location" class="feature-icon">
+                    </div>
+                    <h2 class="feature-title">Location</h2>
+                    <p class="feature-description">100 Ft Road Corridor,Hyderabad</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon-container">
+                        <img src="assets/totallayout.png" alt="Total Layout Area" class="feature-icon">
+                    </div>
+                    <h2 class="feature-title">Total Layout Area</h2>
+                    <p class="feature-description">10 Acres</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon-container">
+                       <img src="assets/plotsize.png" alt="Plot Size" class="feature-icon">
+                    </div>
+                    <h2 class="feature-title">Plot Size</h2>
+                    <p class="feature-description">Starting from 200 sq. yards</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon-container">
+                       <img src="assets/orientation.png" alt="Plot Orientation" class="feature-icon">
+                    </div>
+                    <h2 class="feature-title">Plot Orientation</h2>
+                    <p class="feature-description">Vastu-compliant, East & West-facing options</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon-container">
+                      <img src="assets/approvals.png" alt="Approvals" class="feature-icon">
+                    </div>
+                    <h2 class="feature-title">Approvals</h2>
+                    <p class="feature-description">RERA Registered, HUDA Approved</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+   <!-- Project Features & Infrastructure Section -->
+<section class="showcase-area">
+    <div class="container-fluid">
+        <h2 class="project-feature-heading">Project Features & <span class="accent-text">Infrastructure</span></h2>
+        
+        <p class="showcase-text">
+            Every element of this project has been thoughtfully crafted to provide long-term value and ease of development.
+        </p>
+        
+        <div class="row">
+            <div class="col-lg-5">
+
+               <div class="main-box">
+                <div class="img-box">
+                    <div class="property-location-wrapper">
+                    <div class="map-box"></div>
+                </div>
+               </div>
+            </div>
+            </div>
+            
+            <div class="col-lg-7 p-4">
+
+                <div class="amenities-container">
+                    <div class="amenity-row">
+                        <div>
+                            <p><span class="amenity-name">Wide CC (Cement Concrete) Roads:</span>
+                              <span class="amenity-info">30 & 40 ft internal roads for smooth access</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="amenity-row">
+                        <div>
+                            <p><span class="amenity-name">Solar-Powered Street Lighting:</span>
+                            <span class="amenity-info">Environmentally sustainable and cost-efficient</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="amenity-row">
+                        <div>
+                            <p> <span class="amenity-name">Underground Water Pipeline:</span>
+                            <span class="amenity-info">Future-ready infrastructure for seamless utility access </span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="amenity-row">
+                        <div>
+                            <p> <span class="amenity-name">Landscaped Footpaths:</span>
+                            <span class="amenity-info">Enhancing the aesthetic value with green, pedestrian-friendly spaces</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="amenity-row">
+                        <div>
+                            <p><span class="amenity-name">Dedicated Park Area & Plantation Avenue:</span>
+                            <span class="amenity-info">Reserved spaces for recreation and natural beauty</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="amenity-row">
+                        <div>
+                            <p><span class="amenity-name">Secure Gated Community:</span>
+                            <span class="amenity-info">Ensuring privacy and safety for residents</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+    
+    <!-- Strategic Location Benefits Section -->
+    <section class="location-section">
+        <div class="strategic-heading">Strategic Location Benefits</div>
+
+        <p class="location-description">
+            This development is perfectly positioned to leverage Hyderabad's rapid expansion, offering immediate connectivity and long-term appreciation. Located near key highways and emerging commercial hubs, the 100 Ft Road Corridor is set to become one of the most sought-after addresses in the city.
+        </p>
+        
+        <div class="row">
+            <div class="col-lg-7">
+                <h3 class="category-heading">Proximity to Key Areas:</h3>
+                 <div class="hr mb-4"></div>
+                
+                <ul class="benefits-list">
+                    <li class="benefit-point">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        Close to IT hubs, educational institutions, and healthcare centers
+                    </li>
+                    <li class="benefit-point">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        Easy access to Outer Ring Road (ORR) and Airport Road
+                    </li>
+                    <li class="benefit-point">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        Rapidly developing infrastructure for enhanced connectivity
+                    </li>
+                </ul>
+                
+                <h3 class="category-heading">Investment Advantage:</h3>
+                <div class="hr mb-4"></div>
+                <ul class="benefits-list">
+                    <li class="benefit-point">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        High growth potential in an underdeveloped yet strategically critical area
+                    </li>
+                    <li class="benefit-point">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        Ideal for both immediate construction and long-term value appreciation
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-5 strategic-image">
+                <div class="concept-container">
+                    <!-- Dot pattern decoration -->
+                    <div class="dot-pattern">
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                        
+                        <div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div>
+                        <div class="dot"></div><div class="dot"></div>
+                    </div>
+                    
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-lg-6">
+                                <div class="image-container">
+                                    <img src="assets/strategiclocation.jpg" class="concept-image">
+                                </div>
+                                <div class="pink-block"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Why Choose This Project? -->
+<section class="why-choose-section">
+    <div class="container">
+        <h2 class="why-choose-title">Why Choose This Project?</h2>
+        
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="plot-types-card">
+                    <div>
+                        <div class="plot-types-header">Available Plot Types</div>
+                
+                    <div class="villa-plot-box">
+                        <h3>Villa Plots</h3>
+                        
+                            <div class="icon-circle">
+                                <img src="assets/readyto-build-icon.png" alt="villa-plot-box">
+                             </div>
+                       
+                        <p>Ideal for building a premium home with vastu-compliant designs</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- Right Side: Features -->
+            <div class="col-lg-5 feature-cards-container">
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="icon-container">
+                                <img src="assets/readyto-build-icon.png" alt="ready-to-build">
+                            </div>
+                            <h3 class="featuretitle">Ready-to-Build</h3>
+                            <p class="feature-description">Infrastructure is complete, and plots are ready for immediate construction.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="col-md-5">
+                        <div class="feature-card">
+                            <div class="icon-container">
+                                <img src="assets/legal-clarity-icon.png" alt="Legal Clarity">
+                            </div>
+                            <h3 class="featuretitle">Legal Clarity</h3>
+                            <p class="feature-description">All documentation is transparent, with RERA and HUDA approval, providing peace of mind.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="feature-card">
+                            <div class="icon-container">
+                                <img src="assets/high-quality-icon.png" alt="High-Quality Infrastructure">
+                            </div>
+                            <h3 class="featuretitle">High-Quality Infrastructure</h3>
+                            <p class="feature-description">From roads to utilities, every detail is built with longevity in mind.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="col-md-5 mb-4">
+                        <div class="feature-card">
+                            <div class="icon-container">
+                                <img src="assets/premium-location-icon.png" alt="Premium Locatio">
+                            </div>
+                            <h3 class="featuretitle">Premium Location</h3>
+                            <p class="feature-description">Situated in an emerging growth corridor, this location promises significant returns on investment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+
+
+
+<!-- Limited Plots Available Section -->
+<section class="limited-plots-container mx-5">
+    <div class="container-fluid mx-3">
+        <h2 class="limitedplots-title">Limited Plots Available</h2>
+        <div class="alert-section">
+            <div class="d-flex align-items-center">
+                <span class="alert-icon"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                <p>This is a rare opportunity to own land in one of Hyderabad's most promising real estate corridors. With limited premium plots available, early investors will benefit from exclusive pricing and launch incentives.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Secure your future today -->
+
+<div class="banner container-fluid p-0">
+    <div class="banner-wrapper">
+       
+        <div class="blue-section">
+            <h1 class="heading">Secure Your Future<br>Today</h1>
+            <a href="#" class="contact-button">Contact Us</a>
+        </div>
+        
+       
+        <div class="pink-section"></div>
+        
+  
+        <div class="image-section">
+            <img src="assets/secure-your-future.png" alt="Real estate handshake with house model and keys">
+        </div>
+    </div>
+</div>
+
+
+
+<div id="footer"></div>
+    <script> 
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+
+       
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
