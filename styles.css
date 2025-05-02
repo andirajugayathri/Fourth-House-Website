@@ -215,6 +215,7 @@
     background-color:#E24626;
     color: white;
     border: none;
+    text-decoration: none;
     padding: 18px 33px;
     border-radius: 10px;
     font-size: 16px;
@@ -770,7 +771,8 @@
 
 @media (max-width: 576px) {
     .team-card {
-        width: 105%;
+        width: auto;
+        height: auto;
        margin-bottom: 85px;
     }
     
@@ -782,16 +784,16 @@
 
 
 @media (max-width: 991.98px) {
-.navbar-collapse {
-position: absolute;
-top: 100%;
-left: 0;
-right: 0;
-background: #f1f1f1;
-z-index: 999;
-padding: 1rem;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+        .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f1f1f1;
+        z-index: 999;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 }
 
 
