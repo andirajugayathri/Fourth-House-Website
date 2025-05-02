@@ -1,4 +1,4 @@
-body {
+* {
     font-family: 'Poppins';
 }
 
@@ -79,8 +79,8 @@ body {
 .call-now-btn {
     background-color: #e05d36;
     color: white;
-    border-radius: 30px;
-    padding: 10px 30px;
+    border-radius: 30px!important;
+    padding: 15px 50px;
     font-weight: bold;
     border: none;
     text-decoration: none;
@@ -856,7 +856,7 @@ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   .testimonial-card {
     background-color: white;
-    height: 300px;
+    height: 340px;
     padding: 30px;
     position: relative;
     margin: 0 10px;
