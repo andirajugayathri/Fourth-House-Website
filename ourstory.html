@@ -126,25 +126,7 @@
             font-size: 25px;
         }
         
-        /* Green Wave Bottom */
-        .wave-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
-        
-        .wave-bottom svg {
-            width: 100%;
-            height: auto;
-        }
-        
-        .wave-path {
-            fill: #008000;
-        }
-        
+   
         /* Media queries for responsive design */
         @media (max-width: 992px) {
             .navbar {
@@ -619,10 +601,32 @@
             
             .earth-image {
                 max-width: 100%;
+                height: auto;
+                margin-top: 20px;
             }
             
             .cta-heading {
                 font-size: 24px;
+            }
+            .development-title{
+                font-size: 30px;
+            }
+            .footer-text{
+                width: auto;
+            }
+        }
+
+        @media (min-width: 300px){
+            .property-location-wrapper {
+                width: 163.5px;
+                left: 177px;
+                top: -63px;
+                padding: 0 20px 10px 10px;
+                height: 182.6px;
+            }
+            .map-box {
+                width: 139.5px;
+                height: 174.6px;
             }
         }
 

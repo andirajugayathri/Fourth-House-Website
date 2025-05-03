@@ -23,14 +23,19 @@
  }
 
 .navbar .nav-link {
-    color: #9c9c9c;
-    font-weight: 700;
+    color: #2A467B;
+    font-weight: 600;
+    font-size:16px ;
     margin: 0 15px;
+}
+
+.navbar .nav-link:hover{
+    color:#E24626;
 }
 
 .hero-section {
     position: relative;
-    min-height: 500px;
+    min-height: 500px;;
     background-color: #f1f1f1;;
     overflow: hidden;
 }
@@ -98,7 +103,7 @@
 
 .feature {
     text-align: center;
-    padding: 59px;
+    padding: 59px 59px 26px 59px;
 }
 
 .feature img {
@@ -120,6 +125,11 @@
     padding: 10px 20px;
     border-radius: 10px 0 0 10px;
     z-index: 1000;
+}
+.hr{
+    width:auto;
+    height:2px;
+    background-color: #fff;
 }
 
 .side-contact a {
@@ -212,7 +222,7 @@
 }
 
 .read-more-btn {
-    background-color:#E24626;
+    background-color:#E24626!important;
     color: white;
     border: none;
     text-decoration: none;
@@ -413,6 +423,7 @@
     padding: 28px 50px!important;
     font-size: 25px!important;
     font-weight: 400!important;
+    text-decoration: none;
     transition: all 0.3s;
 }
 
@@ -1003,7 +1014,7 @@ margin-top: 20%;
 
 .accordion-button {
     background-color: #fff !important;
-    color: #2b3e5f !important;
+    color: #646464 !important;
     font-weight: 600;
     padding: 1.5rem;
     box-shadow: none !important;
@@ -1043,7 +1054,7 @@ margin-top: 20%;
 
 .accordion-body {
     padding: 0 1.5rem 1.5rem;
-    color: #6c757d;
+    color: #646464;
 }
 @media (max-width: 768px) {
     .testimonial-card {
