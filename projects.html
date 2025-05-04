@@ -152,6 +152,7 @@
             
             .project-section {
                 height: 400px;
+                background-position: center;
             }
             
             .project-title {
@@ -159,26 +160,7 @@
             }
         }
         
-        @media (max-width: 576px) {
-            .project-section {
-                height: 300px;
-            }
-            
-            .project-title {
-                font-size: 2rem;
-            }
-            
-            .breadcrumb-home, .breadcrumb-current {
-                font-size: 1rem;
-            }
-        }
-        
-
-       
        /* premium villa */
-
-
-        
         .premium-title {
             color:#2A467B;
             text-align: center;
@@ -508,7 +490,7 @@
         
         .benefit-point {
            display: flex;
-           align-items: center;
+           align-items: flex-start;
             column-gap: 10px;
             margin-bottom: 12px;
             color: #646464;
@@ -519,6 +501,9 @@
 
         .benefit-point i{
             color:#2A467B ;
+            /* margin-top: 6px;  */
+            font-size: 30px;
+            flex-shrink: 0;
         }
         
 
@@ -536,6 +521,9 @@
         }
         
         @media (max-width: 992px) {
+            .location-section {
+                padding:57px 20px;
+            }
             .image-carousel {
                 flex-direction: row;
                 overflow-x: auto;
@@ -549,6 +537,9 @@
         }
         
         @media (max-width: 768px) {
+            .location-section {
+                padding:57px 20px;
+            }
             .strategic-heading{
                 font-size: 24px;
             }
@@ -559,11 +550,6 @@
             .amenities-container {
                 padding: 15px;
             }
-            
-            /* .benefit-point {
-                padding: 8px 0 8px 25px;
-                font-size: 0.9rem;
-            } */
             
             .benefit-point:before {
                 width: 16px;
@@ -618,14 +604,7 @@
             padding: 3rem 0;
             position: relative;
         }
-        
-        .plot-types-header {
-            color: #e74c3c;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
+       
         .plot-card {
             position: relative;
             border-radius: 15px;
@@ -663,11 +642,7 @@
             color: #3498db;
         }
 
-
-
-
-        
-        /* .limited-plots-container {
+      /* .limited-plots-container {
             background-color: #f8f9fa;
             padding: 3rem 0;
         } */
@@ -686,7 +661,6 @@
         
         .alert-icon {
             color: #e74c3c;
-            margin-top: -36px;
             font-size: 1.5rem;
             margin-right: 0.5rem;
         }
@@ -726,16 +700,12 @@
         }
         
         @media (max-width: 768px) {
-            .feature-card, .plot-card {
-                margin-bottom: 1rem;
-            }
-            
             .cta-title {
                 font-size: 2rem;
             }
             
             .plot-types-header {
-                font-size: 1.5rem;
+                padding: auto;
             }
             
             .section-title {
@@ -745,60 +715,60 @@
 
 
 
-.main-box{
-    width: 390px;
-    height: 273px;
-    margin-top: 43.48px;
-    margin-left: 63px;
-    background-color: red;
-    border-radius: 10px;
+        .main-box{
+            width: 390px;
+            height: 273px;
+            margin-top: 43.48px;
+            margin-left: 63px;
+            background-color: red;
+            border-radius: 10px;
 
-}
-.img-box{
-
-
-    width: 498px;
-    height: 309px;
-    margin-top: 3% !important;
-    background-image: url('assets/projectfeature.jpg');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    margin-left: 2%;
-    border-radius: 10px;
-
-}
-
-.map-box{
-    width: 206.5px;
-    height: 239.6px;
-    border-radius: 10px;
-   
-    background-position: center;
-    background-image: url(assets/projectfeauturemap.jpg);
-    background-size: cover;
-}
-
-.property-location-wrapper {
-    width: 238.5px;
-    left: 310px;
-    top: -99px;
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: white;
-    padding: 0 20px 10px 10px;
-    height: 249.6px;
-}
-
-.dot-pattern {
-    margin-left: -32px;
-    margin-bottom: -122px;
-    display: grid;
-    grid-template-columns: repeat(10, 0fr);
-    gap: 10px;;
         }
+        .img-box{
+
+
+            width: 498px;
+            height: 309px;
+            margin-top: 3% !important;
+            background-image: url('assets/projectfeature.jpg');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            margin-left: 2%;
+            border-radius: 10px;
+
+        }
+
+        .map-box{
+            width: 206.5px;
+            height: 239.6px;
+            border-radius: 10px;
         
+            background-position: center;
+            background-image: url(assets/projectfeauturemap.jpg);
+            background-size: cover;
+        }
+
+        .property-location-wrapper {
+            width: 238.5px;
+            left: 310px;
+            top: -99px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: white;
+            padding: 0 20px 10px 10px;
+            height: 249.6px;
+        }
+
+        .dot-pattern {
+            margin-left: -32px;
+            margin-bottom: -122px;
+            display: grid;
+            grid-template-columns: repeat(10, 0fr);
+            gap: 10px;;
+        }
+                
         .dot {
             width: 12px;
             height: 12px;
@@ -826,29 +796,10 @@
             background-color: rgba(247, 191, 190, 0.5);
 
         }
-        
-        @media (max-width: 768px) {
-            .concept-container {
-                padding: 10px;
-                margin: 20px auto;
-            }
-            
-            .dot-pattern {
-                grid-template-columns: repeat(6, 1fr);
-            }
-            
-            .pink-block {
-                width: 70%;
-                height: 70px;
-                bottom: -10px;
-                right: -10px;
-            }
-        }
-
 
           /* why choose this project */
         
-          .why-choose-section {
+        .why-choose-section {
             padding: 60px 0;
             background-image: url('assets/why-choose-bg.png');
             /* height: 100%; */
@@ -893,7 +844,7 @@
             border: 4px solid #FFFFFF;
             border-radius: 10px;
             color: #F80208;
-            padding: 10px 20px;
+            /* padding: 10px 20px; */
             display: inline-block;
             width: 100%;
             text-align: center;
@@ -1015,6 +966,14 @@
         height: auto;
         padding: 20px 15px;
         margin-bottom: 15px;
+    }
+
+    .col-md-6:nth-child(3) .feature-card {
+        margin-top: 25px!important;
+    }
+
+    .col-md-5 .feature-card {
+        margin-top: 25px!important;
     }
 
     .icon-container {
@@ -1151,8 +1110,8 @@ Secure your future section */
             .img-box {
                 width: 326px;
                 height: 226px;
-                margin-top: 3% !important;
-                margin-left: 2%;
+                margin-top: 7% !important;
+                margin-left: 5%;
                 border-radius: 10px;
             }
 
@@ -1167,20 +1126,14 @@ Secure your future section */
                 width: 178.5px;
                 height: 202.6px;
             }
-            .pink-block {
-                width: 100%;
-                height: 141px;
-                margin-top: -275px;
-                margin-left: 150px;
-                bottom: -10px;
-                right: -10px;
-            }
+           
             .dot-pattern {
                 grid-template-columns: repeat(8, 1fr);
-                margin-left: 13px;
+                margin-left: 40px;
                 margin-bottom: -160px;
                 display: grid;
                 gap: 9px;
+
             }
 
             .concept-container {
@@ -1190,9 +1143,10 @@ Secure your future section */
 
             .image-container {
                 width: 276px;
-                margin-left: 47px;
+                margin-left: 82px;
                 height: 357px;
                 overflow: hidden;
+
             }
             .why-choose-section {
                 margin-top: -82px;
@@ -1200,39 +1154,63 @@ Secure your future section */
             }
             .alert-icon {
                 color: #e74c3c;
-                margin-top: -149px;
         }
+        
     }
 
         @media (max-width: 576px) {
-        .blue-section {
-            width: 100%;
-            padding-left: 20px;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            align-items: center;
-            text-align: center;
-        }
+            .location-section {
+                padding:57px 20px;
+            }
+            .blue-section {
+                width: 100%;
+                padding-left: 20px;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                align-items: center;
+                text-align: center;
+            }
 
-        .pink-section {
-            display: none;
-        }
+            .pink-section {
+                display: none;
+            }
 
-        .image-section {
-            display: none;
-        }
+            .image-section {
+                display: none;
+            }
 
-        .heading {
-            font-size: 2.8rem;
-        }
+            .heading {
+                font-size: 2.8rem;
+            }
 
-        .contact-button {
-            width: auto;
-            font-size: 1.5rem;
-            padding: 15px 42px;
-        }
-    }
+            .contact-button {
+                width: auto;
+                font-size: 1.5rem;
+                padding: 15px 42px;
+            }
+            .img-box{
+                margin-top: 7%!important;
+                margin-left: 5%;
+            }
+            .property-location-wrapper {
+                width: 180px;
+                height: auto;
 
+            }
+            .map-box {
+                width: 149.5px;
+                height: 174.6px;
+            }
+            .pink-block {
+                width: 73%;
+                height: 141px;
+                margin-top: -275px;
+                margin-left: 165px!important;
+            }
+        }
     @media (max-width: 400px) {
+        .location-section {
+                padding:57px 20px;
+        }
         .heading {
             font-size: 2.3rem;
         }
@@ -1242,52 +1220,66 @@ Secure your future section */
             padding: 8px 25px;
         }
 
-        .property-location-wrapper {
-            width: 163.5px;
-            left: 177px;
-            top: -63px;
-            padding: 0 20px 10px 10px;
-            height: 182.6px;
-        }
         .map-box {
-            width: 139.5px;
+            width: 109.5px;
             height: 174.6px;
         }
         .img-box{
             width: 285px;
         }
 
-        .pink-block {
-            width: 100%;
-            height: 141px;
-            margin-top: -325px;
-            margin-left: 137px;
+      
+        .property-location-wrapper {
+            width: 135px;
+            height: auto;
+
         }
-        .image-container {
-                width: 212px;
-                margin-left: 43px;
-                height: 357px;
-                overflow: hidden;
+
+        .pink-block {
+        width: 80%;
+        height: 145px;
+        margin-top: -297px;
+        margin-left: 156px!important;
+    }
+
+    .image-container {
+        width: 257px;
+        margin-left: 85px;
+        height: 359px;
+        overflow: hidden;
+    }
+
+    .dot-pattern {
+        grid-template-columns: repeat(8, 1fr);
+        margin-left: 40px;
+        margin-bottom: -159px;
+        display: grid;
+        gap: 9px;
+    }
+    }
+    @media (max-width: 350px) {
+        .location-section {
+                padding:57px 20px;
         }
         .property-location-wrapper {
-            width: 160px;
-
+            width: 94px;
+            height: 115px;
+            top:-64px;
         }
+        .map-box {
+            width: 70.5px;
+            height: 108.6px;
+        }
+        .img-box {
+            width: 249px;
+        }
+        .pink-block {
+        width: 73%;
+        height: 141px;
+        margin-top: -275px;
+        margin-left: 170px;
+    }
 }
-@media (max-width: 350px) {
-    .property-location-wrapper {
-        width: 94px;
-        height: 115px;
-    }
-    .map-box {
-        width: 70.5px;
-        height: 108.6px;
-    }
-    .img-box {
-        width: 249px;
-    }
-}
-
         
  </style>
 </head>
@@ -1510,31 +1502,31 @@ Secure your future section */
                 <h3 class="category-heading">Proximity to Key Areas:</h3>
                  <div class="hr mb-4"></div>
                 
-                <ul class="benefits-list">
+                <div class="benefits-list">
+                    <div class="benefit-point">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <div>Close to IT hubs, educational institutions, and healthcare centers</div>
+                    </div>
                     <li class="benefit-point">
-                        <p><i class="fa-solid fa-circle-arrow-right"></i>
-                        Close to IT hubs, educational institutions, and healthcare centers</p>
+                        <span><i class="fa-solid fa-circle-arrow-right"></i></span>
+                        <span>Easy access to Outer Ring Road (ORR) and Airport Road</span>
                     </li>
                     <li class="benefit-point">
-                        <p><i class="fa-solid fa-circle-arrow-right"></i>
-                        Easy access to Outer Ring Road (ORR) and Airport Road</p>
+                        <span><i class="fa-solid fa-circle-arrow-right"></i></span>
+                       <span>Rapidly developing infrastructure for enhanced connectivity</span>
                     </li>
-                    <li class="benefit-point">
-                        <p><i class="fa-solid fa-circle-arrow-right"></i>
-                        Rapidly developing infrastructure for enhanced connectivity</p>
-                    </li>
-                </ul>
+                </div>
                 
                 <h3 class="category-heading">Investment Advantage:</h3>
                 <div class="hr mb-4"></div>
                 <ul class="benefits-list">
                     <li class="benefit-point">
-                        <p><i class="fa-solid fa-circle-arrow-right"></i>
-                        High growth potential in an underdeveloped yet strategically critical area</p>
+                        <span><i class="fa-solid fa-circle-arrow-right"></i></span>
+                        <span>High growth potential in an underdeveloped yet strategically critical area</span>
                     </li>
                     <li class="benefit-point">
-                        <p><i class="fa-solid fa-circle-arrow-right"></i>
-                        Ideal for both immediate construction and long-term value appreciation</p>
+                        <span><i class="fa-solid fa-circle-arrow-right"></i></span>
+                        <span>Ideal for both immediate construction and long-term value appreciation</span>
                     </li>
                 </ul>
             </div>
@@ -1604,8 +1596,6 @@ Secure your future section */
                 </div>
                 </div>
             </div>
-            
-            <!-- Right Side: Features -->
             <div class="col-lg-5 feature-cards-container">
                 <div class="row">
                     <!-- Card 1 -->
@@ -1621,7 +1611,7 @@ Secure your future section */
                     
                     <!-- Card 2 -->
                     <div class="col-md-5">
-                        <div class="feature-card">
+                        <div class="feature-card" style="margin-top: 30px;">
                             <div class="icon-container">
                                 <img src="assets/legal-clarity-icon.png" alt="Legal Clarity">
                             </div>
@@ -1631,8 +1621,8 @@ Secure your future section */
                     </div>
                     
                     <!-- Card 3 -->
-                    <div class="col-md-6 mb-4">
-                        <div class="feature-card">
+                    <div class="col-md-6">
+                        <div class="feature-card" style="margin-top: -29px;">
                             <div class="icon-container">
                                 <img src="assets/high-quality-icon.png" alt="High-Quality Infrastructure">
                             </div>
@@ -1642,7 +1632,7 @@ Secure your future section */
                     </div>
                     
                     <!-- Card 4 -->
-                    <div class="col-md-5 mb-4">
+                    <div class="col-md-5">
                         <div class="feature-card">
                             <div class="icon-container">
                                 <img src="assets/premium-location-icon.png" alt="Premium Locatio">
@@ -1656,24 +1646,20 @@ Secure your future section */
     </div>
 </section>
 
-
-
-
 <!-- Limited Plots Available Section -->
-<section class="limited-plots-container mx-5">
-    <div class="container-fluid mx-3">
+<section class="limited-plots-container mx-lg-5">
+    <div class="container-fluid mx-lg-3">
         <h2 class="limitedplots-title">Limited Plots Available</h2>
         <div class="alert-section">
-            <div class="d-flex align-items-center">
-                <p><span class="alert-icon"><i class="fa-solid fa-circle-arrow-right"></i></span>
-               This is a rare opportunity to own land in one of Hyderabad's most promising real estate corridors. With limited premium plots available, early investors will benefit from exclusive pricing and launch incentives.</p>
+            <div class="d-flex align-items-start">
+                <span class="alert-icon"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                 <div>This is a rare opportunity to own land in one of Hyderabad's most promising real estate corridors. With limited premium plots available, early investors will benefit from exclusive pricing and launch incentives.</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Secure your future today -->
-
 <div class="banner container-fluid p-0">
     <div class="banner-wrapper">
        
