@@ -251,6 +251,16 @@
             font-weight: 400;
             font-size: 18px;
             line-height: 26px;
+            overflow-wrap: anywhere;
+        }
+
+        .form-control {
+            display: block;
+            width: 95%;
+            padding: 15px 19px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.5;
         }
         
         .formcontrol {
@@ -277,7 +287,7 @@
         .input-icon i {
             position: absolute;
             left: 15px;
-            top: 40%;
+            top: 19px;
             transform: translateY(-50%);
             color: #ff0000;
         }
@@ -306,6 +316,33 @@
         
         .contact-information {
             border-bottom: 1px solid #0632321A;
+        }
+
+        .input-icon {
+             position: relative;
+        }
+        .input-icon i {
+            position: absolute;
+            top: 50%;
+            left: 19px;
+            transform: translateY(-50%);
+            color: #aaa;
+            transform: translateY(-50%);
+            color: #ff0000;
+        }
+        .input-icon input {
+            padding-left: 45px;
+            border-radius: 28px;
+
+        }
+        .btn-primary{
+            background-color: #2A467B;
+            padding: 15px 25px;
+            border-radius: 40px;
+        }
+        .btn-primary:hover{
+            background-color: #5875ab;
+
         }
         
         @media (max-width: 991px) {
@@ -433,56 +470,87 @@
             <div class="col-lg-7">
                 <div class="contact-form-card">
                     <h2 class="lets-contact mb-lg-5">Let's Contact with us</h2>
-                    
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="input-icon">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" class="formcontrol" placeholder="Your Name" required>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6 mb-3">
-                                <div class="input-icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="email" class="formcontrol" placeholder="Your Email" required>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6 mb-3">
-                                <div class="input-icon">
-                                    <i class="fas fa-phone"></i>
-                                    <input type="tel" class="formcontrol" placeholder="Phone No." required>
-                                </div>
-                            </div>
-                            
-                            <div class="col-11 mb-3">
-                                <textarea class="form-control" rows="5" placeholder="Write your message"></textarea>
-                            </div>
-                            
-                            <div class="col-12 mb-4 mt-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="termsCheck">
-                                    <label class="form-check-label" for="termsCheck">
-                                        I agree to all terms and conditions.
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <button type="submit" class="submit-btn">
-                                    Submit <i class="fas fa-arrow-right ms-2"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                
+        <form>
+        <div class="row">
+        <!-- Name -->
+        <div class="col-md-6 mb-3">
+            <div class="input-icon">
+            <i class="fas fa-user"></i>
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Your Name"
+                required
+            />
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6 mb-3">
+            <div class="input-icon">
+            <i class="fas fa-envelope"></i>
+            <input
+                type="email"
+                class="form-control"
+                placeholder="Your Email"
+                required
+            />
+            </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="col-md-6 mb-3">
+            <div class="input-icon">
+            <i class="fas fa-phone"></i>
+            <input
+                type="tel"
+                class="form-control"
+                placeholder="Phone No."
+                required
+            />
+            </div>
+        </div>
+
+        <!-- Message -->
+        <div class="col-12 mb-3">
+            <textarea
+            class="form-control"
+            rows="5"
+            placeholder="Write your message"
+            ></textarea>
+        </div>
+
+        <!-- Terms Checkbox -->
+        <div class="col-12 mb-4 mt-4">
+            <div class="form-check">
+            <input
+                class="form-check-input"
+                type="checkbox"
+                id="termsCheck"
+                required
+            />
+            <label class="form-check-label" for="termsCheck">
+                I agree to all terms and conditions.
+            </label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">
+            Submit <i class="fas fa-arrow-right ms-2"></i>
+            </button>
+        </div>
+        </div>
+        </form>
+
                 </div>
             </div>
         </div>
     </div>
     <!-- Map Section -->
- <div class="map-container mt-4">
+ <div class="map-container mt-5">
     <div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.546653449609!2d-0.1243901110394971!3d51.5031862991327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sen!2sin!4v1745852974362!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
