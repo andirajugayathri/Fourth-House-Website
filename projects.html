@@ -34,17 +34,15 @@
         /* Navbar Styling */
         .navbar {
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            padding: 50px 0;
         }
         
         .navbar.scrolled {
-            padding:10px;
             background-color: white !important;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
         .navbar-brand img {
-            height: 50px;
+            height: 65px;
         }
         
         .navbar-nav .nav-link {
@@ -73,11 +71,11 @@
         /* project-section */
         .project-section {
             position: relative;
-            height: 590px;
+            height: 694px;
             width: 100%;
-            background-image:url('assets/projectbanner.png');
+            background-image:url('assets/project.jpg');
             background-size: cover;
-            /* background-position: center; */
+            background-position: center!important;
             overflow: hidden;
             
         }
@@ -137,7 +135,6 @@
         @media (max-width: 992px) {
             .navbar {
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            padding: 10px 0;
             }
             .navbar-nav {
                 background-color: white;
@@ -427,6 +424,7 @@
             font-size: 18px;
             display: flex;
             align-items: flex-start;
+            gap:9px;
         }
         
         .amenity-name {
@@ -549,7 +547,7 @@
             }
             
             .amenities-container {
-                padding: 15px;
+                padding:60px 15px 0px 15px;
             }
             
             .benefit-point:before {
@@ -662,7 +660,7 @@
         
         .alert-icon {
             color: #e74c3c;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-right: 0.5rem;
         }
         
@@ -1281,60 +1279,74 @@ Secure your future section */
         margin-left: 170px;
     }
 }
+
+        .amenity-row  i{
+                    font-size: 28px;
+                    font-weight: 900;
+                    color: #E24626;
+        }
+
+        .limited-description{
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+           color: #646464;
+
+        }
         
  </style>
 </head>
 <body>
     <!-- Top Header -->
-     <div class="top-header d-lg-block d-none">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="d-flex align-items-center gap-4">
-                        <a href="tel:+911234567890" class="me-4"><i class="fas fa-phone me-2"></i> +91 12345 67890</a>
-                        <a href="mailto:fourthhouseprime@gmail.com"><i class="fas fa-envelope me-2"></i> fourthhouseprime@gmail.com</a>
+    <div class="fixed-top">
+        <div class="top-header d-lg-block d-none">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center gap-4">
+                            <a href="tel:+911234567890" class="me-4"><i class="fas fa-phone me-2"></i> +91 12345 67890</a>
+                            <a href="mailto:fourthhouseprime@gmail.com"><i class="fas fa-envelope me-2"></i> fourthhouseprime@gmail.com</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 text-end">
-                    
-                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                   
+                    <div class="col-md-6 text-end">
+                        <a href="https://www.facebook.com/profile.php?id=100065516678560" class="me-2" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/FHouse32467" class="me-2" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/fourthhouse04/" class="me-2" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <!-- <a href="#"><i class="fab fa-dribbble"></i></a> -->
+                        <a href="https://www.linkedin.com/in/fourthhouse04/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></a>
+                    </div>
                 </div>
             </div>
         </div>
+         <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo-fourth-house.png" alt="Fourth House Logo" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-4">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ourstory.html">Our Story</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-us.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-
-   
-   <!-- Navigation -->
-   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/Fourth-House-Prime-Properties-Logo.png" alt="Fourth House Logo" class="img-fluid">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav gap-4">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="ourstory.html">Our Story</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact-us.html">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
 
 <!-- Hero Section with green fields background -->
 <section class="project-section">
@@ -1444,6 +1456,7 @@ Secure your future section */
 
                 <div class="amenities-container">
                     <div class="amenity-row">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
                         <div>
                             <p><span class="amenity-name">Wide CC (Cement Concrete) Roads:</span>
                               <span class="amenity-info">30 & 40 ft internal roads for smooth access</span></p>
@@ -1451,6 +1464,7 @@ Secure your future section */
                     </div>
                     
                     <div class="amenity-row">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
                         <div>
                             <p><span class="amenity-name">Solar-Powered Street Lighting:</span>
                             <span class="amenity-info">Environmentally sustainable and cost-efficient</span></p>
@@ -1458,6 +1472,7 @@ Secure your future section */
                     </div>
                     
                     <div class="amenity-row">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
                         <div>
                             <p> <span class="amenity-name">Underground Water Pipeline:</span>
                             <span class="amenity-info">Future-ready infrastructure for seamless utility access </span></p>
@@ -1465,6 +1480,7 @@ Secure your future section */
                     </div>
                     
                     <div class="amenity-row">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
                         <div>
                             <p> <span class="amenity-name">Landscaped Footpaths:</span>
                             <span class="amenity-info">Enhancing the aesthetic value with green, pedestrian-friendly spaces</span></p>
@@ -1472,6 +1488,7 @@ Secure your future section */
                     </div>
                     
                     <div class="amenity-row">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
                         <div>
                             <p><span class="amenity-name">Dedicated Park Area & Plantation Avenue:</span>
                             <span class="amenity-info">Reserved spaces for recreation and natural beauty</span></p>
@@ -1479,6 +1496,7 @@ Secure your future section */
                     </div>
                     
                     <div class="amenity-row">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
                         <div>
                             <p><span class="amenity-name">Secure Gated Community:</span>
                             <span class="amenity-info">Ensuring privacy and safety for residents</span></p>
@@ -1654,7 +1672,7 @@ Secure your future section */
         <div class="alert-section">
             <div class="d-flex align-items-start">
                 <span class="alert-icon"><i class="fa-solid fa-circle-arrow-right"></i></span>
-                 <div>This is a rare opportunity to own land in one of Hyderabad's most promising real estate corridors. With limited premium plots available, early investors will benefit from exclusive pricing and launch incentives.</div>
+                 <div class="limited-description">This is a rare opportunity to own land in one of Hyderabad's most promising real estate corridors. With limited premium plots available, early investors will benefit from exclusive pricing and launch incentives.</div>
             </div>
         </div>
     </div>
