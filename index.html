@@ -57,7 +57,7 @@
         display: flex;
         text-align: center;
         padding-right: 65px!important;
-        padding-top: 43px;
+        padding-top: 60px;
     }
     .location-text{
     font-size:18px;
@@ -86,11 +86,17 @@
       font-size: 12px;
     }
     .story-badge{
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-bottom: 36px !important;
     }
     .contact-bg-wrapper {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(assets/contactimage.jpg) no-repeat center center;
-    }  
+    } 
+    .hero-image{
+      height: 35vh;
+    } 
     }
     @media (max-width: 992px) {
 
@@ -106,7 +112,44 @@
 
     }
     }
-    </style>
+
+    @media (max-width: 768px) {
+    .side-contact {
+        top: auto;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        border-radius: 10px 10px 0 0;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hr {
+        width: 2px;
+        height: auto;
+        background-color: #fff;
+    }
+
+    .side-contact a {
+        margin: 0;
+    }
+    .read-more-btn{
+      margin-left: 30%;
+    }
+    .team-section{
+      padding:60px 0px 0px 0px!important;
+    }
+    .testimonial-section{
+      padding-top: 75px!important;
+    }
+}
+   
+
+
+</style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -167,10 +210,10 @@
           
               
             <div class="row hero-content">
-                <div class="col-md-12 position-relative">
+                <div class="col-md-12 position-relative sm-mt-5">
                     <img src="assets/home-banner.png" id="banner" alt="Plot visualization" class="hero-image">
                 </div>
-                <div class="col-md-11 hero-text position-absolute">
+                <div class="col-md-11 hero-text position-absolute mt-5">
                     <span class="location-text">Open Plots</span>
                     <div class="launching-text">Launching
                     <span class="location-text">at</span>
@@ -376,7 +419,7 @@
       <i class="fas fa-home"></i><span class="testimonial">Our Testimonials</span>
     </div>
     <h2 class="client-title">Clients Feedback</h2>
-    <div class="position-relative">
+    <div class="position-relative  d-lg-block d-none">
       <div class="testimonial-nav">
         <div class="nav-btn prev" id="prevBtn">
           <i class="fa-solid fa-arrow-left"></i>
