@@ -374,6 +374,33 @@
             .contact-form-card {
                 padding: 25px;
             }
+            .submit-button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .side-contact {
+                top: auto;
+                bottom: 0;
+                right: 50%;
+                transform: translateX(50%);
+                border-radius: 10px 10px 0 0;
+                padding: 10px 15px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .hr {
+                width: 2px;
+                height: auto;
+                background-color: #fff;
+            }
+
+            .side-contact a {
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -564,7 +591,7 @@
         </div>
 
         <!-- Submit Button -->
-        <div class="col-12">
+        <div class="col-12 submit-button">
             <button type="submit" class="btn btn-primary">
             Submit <i class="fas fa-arrow-right ms-2"></i>
             </button>

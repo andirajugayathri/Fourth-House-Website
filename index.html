@@ -40,14 +40,7 @@
         position: relative;
     }
 
-    /* .navbar-nav .nav-link.active::after {
-      content: '';
-      position: absolute;
-      bottom: 3px;
-      left: 3px;
-      right: -295px;
-      border: 1px solid #2A467B;
-    } */
+
     @media (max-width: 768px) {
 
     .hero-text{
@@ -97,6 +90,20 @@
     .hero-image{
       height: 35vh;
     } 
+    .homelink::after {
+      content: '';
+      position: absolute;
+      top: 50px;
+      left: 22px;
+      right: 30px;
+      border: 1px solid #2A467B;
+    }
+    .homelink{
+      color: #e24626 !important;
+    }
+    .navbar-nav .nav-link{
+      margin-bottom: 1.5rem !important;
+    }
     }
     @media (max-width: 992px) {
 
@@ -188,7 +195,7 @@
           
               <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto  gap-2 text-center align-items-center">
-                  <li class="nav-item mt-lg-4"><a class="nav-link" href="#">Home</a></li>
+                  <li class="nav-item mt-lg-4"><a class="nav-link homelink" href="#">Home</a></li>
                   <li class="nav-item mt-lg-4"><a class="nav-link" href="ourstory.html">Our Story</a></li>
           
                   <li class="nav-item d-none d-lg-flex align-items-center">
