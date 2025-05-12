@@ -413,6 +413,7 @@
     padding-right:20px;
     color: #e74c3c;
     background-color: #D9D9D9;
+    border-radius: 5px;
     font-weight: 700;
     margin-bottom: 30px;
 }
@@ -494,7 +495,7 @@
 
 @media (max-width: 768px) {
     .property-main-heading {
-        font-size: 28px;
+        font-size: 26px;
     }
     
     .property-location-name {
