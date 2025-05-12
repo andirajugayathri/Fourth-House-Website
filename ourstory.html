@@ -73,7 +73,7 @@
             position: relative;
             height: 590px;
             width: 100%;
-            background-image:url('assets/our-story-banner.png');
+            background-image:url('assets/our-story-banner.jpg');
             background-size: cover;
             background-position: center;
             overflow: hidden;
@@ -206,18 +206,16 @@
         .aboutus {
             margin-bottom: 15px;
             color:#E24626;
-            display:flex;
-            gap:14px;
-            align-items: center;
-            
+            display: flex;
+            align-items: center;   
         }
 
-        
         .about{
             background-color: #FAD3D4;
             padding: 3px 15px;
             border-radius: 15px;
             font-size: 16px;
+            margin-left: 14px;
             font-weight: 600;
         }
 
@@ -272,32 +270,7 @@
             .doorway-image {
                 margin-top: 30px;
             }
-            .side-contact {
-        top: auto;
-        bottom: 0;
-        right: 50%;
-        transform: translateX(50%);
-        border-radius: 10px 10px 0 0;
-        padding: 10px 15px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .hr {
-        width: 2px;
-        height: auto;
-        background-color: #fff;
-    }
-
-    .side-contact a {
-        margin: 0;
-    }
         }
-
-
-
 
         .legacy-section {
             background-color: #EFF4F9;
@@ -659,6 +632,7 @@
             .about-section{
                 padding: 25px 0px;
             }
+            
         }
 
         @media (min-width: 300px){
@@ -691,7 +665,53 @@
             font-weight: 900;
             color: #E24626;
         }
+        /* Hide on desktop */
+.mobile-contact-bar {
+    display: none;
+}
 
+@media (max-width: 768px) {
+    .mobile-contact-bar {
+        display: flex!important;
+        gap:1px;      
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      
+        z-index: 1000;
+    }
+
+    .contact-item {
+        flex: 1;
+        text-align: center;
+        padding: 10px 5px;
+        background-color:#AD8E50;
+        color: white;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        font-size: 12px;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .contact-item:last-child {
+        border-right: none;
+    }
+
+    .contact-item i {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .contact-item span {
+        font-weight: 500;
+    }
+}
 
 
 
@@ -764,13 +784,31 @@
 </section>
 
  <!-- Side Contact Bar -->
- <div class="side-contact">
-    <a href="https://wa.me/911234567890" target="_blank"><i class="fab fa-whatsapp" style="font-size: 28px;"></i></a>
-    <div class="hr"></div>
-    <a href="tel:+911234567890" target="_blank"><i class="fas fa-phone"></i></a>
-    <div class="hr"></div>
-    <a href="mailto:fourthhouseprime@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-</div>
+    <div class="side-contact d-lg-block d-none ">
+        <a href="https://wa.me/911234567890" target="_blank"><i class="fab fa-whatsapp" style="font-size: 28px;"></i></a>
+        <div class="hr"></div>
+        <a href="tel:+911234567890" target="_blank"><i class="fas fa-phone"></i></a>
+        <div class="hr"></div>
+        <a href="mailto:fourthhouseprime@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+
+
+    <!-- Bottom Contact Bar -->
+    <div class="mobile-contact-bar d-lg-none d-block">
+        <a href="https://wa.me/911234567890" target="_blank" class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="tel:+911234567890" class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>Contact</span>
+        </a>
+        <a href="mailto:fourthhouseprime@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+        </a>
+    </div>
+
 
     <!-- About Section -->
     <section class="about-section">
